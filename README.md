@@ -1,2 +1,3 @@
 # Hackranker
-Algorithms written mainly for Hackerrank website.
+
+Algorithms written mainly for Hackerrank page.
