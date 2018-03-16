@@ -1,0 +1,31 @@
+AI has a lot of problems that involve searches. In this track you will learn most of the search techniques used in AI.
+
+In this game, PacMan is positioned in a grid. PacMan has to find the food using Depth First Search (DFS). Assume the grid is completely observable, perform a DFS on the grid and then print the path obtained by DFS from the PacMan to the food.
+
+Input Format
+
+The first line contains 2 space separated integers which is the position of the PacMan. 
+The second line contains 2 space separated integers which is the position of the food. 
+The third line of the input contains 2 space separated integers indicating the size of the rows and columns respectively. The largest grid size is 30x30.
+
+This is followed by row (r) lines each containing column (c) characters. A wall is represented by the character '%' ( ascii value 37 ), PacMan is represented by UpperCase alphabet 'P' ( ascii value 80 ), empty spaces which can be used by PacMan for movement is represented by the character '-' ( ascii value 45 ) and food is represented by the character '.' ( ascii value 46 )
+
+You have to mark the nodes explored while populating it into the stack and not when its expanded.
+
+Note 
++ The grid is indexed as per matrix convention 
++ The evaluation process follows iterative-DFS and not recursive-DFS.
+
+Populating Stack
+
+In order to maintain uniformity across submissions, please follow the below mentioned order in pushing nodes to stack. If a node has all the 4 adjacent neighbors. Then,
+
+UP is inserted first into the stack, followed by LEFT, followed by RIGHT and then by DOWN.
+
+so, if (1,1) has all its neighbors not visited, (0,1), (1,0), (1,2), (2,1) then,
+
+(0,1) - UP is inserted first
+(1,0) - LEFT is inserted second
+(1,2) - RIGHT is inserted third
+(2,1) - DOWN is inserted fourth (on top)
+So, (2,1) is the first to be popped from the stack.
